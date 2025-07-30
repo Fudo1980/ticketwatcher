@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TicketWatcher</title>
+</head>
+<body>
+    <h1>TicketWatcher</h1>
+    <form action="/start" method="post">
+        <label>URL der zu überwachenden Seite:<br>
+            <input type="text" name="url" required>
+        </label><br><br>
+
+        <label>Gesuchter Text:<br>
+            <input type="text" name="search_text" required>
+        </label><br><br>
+
+        <label>Überprüfungsintervall:<br>
+            <select name="interval">
+                <option value="120">Alle 2 Minuten</option>
+                <option value="300">Alle 5 Minuten</option>
+                <option value="600">Alle 10 Minuten</option>
+                <option value="1800">Alle 30 Minuten</option>
+                <option value="3600">Alle 60 Minuten</option>
+            </select>
+        </label><br><br>
+
+        <label>E-Mail für Benachrichtigung:<br>
+            <input type="email" name="email">
+        </label><br><br>
+
+        <label>Überwachungsdauer:<br>
+            <select name="duration">
+                <option value="1">1 Tag</option>
+                <option value="2">2 Tage</option>
+                <option value="3">3 Tage</option>
+                <option value="5">5 Tage</option>
+                <option value="7">7 Tage</option>
+            </select>
+        </label><br><br>
+
+        <button type="submit">Überwachung starten</button>
+    </form>
+</body>
+</html>
